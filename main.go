@@ -2,22 +2,19 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
-func main() {
-	// fix lenght array
-	// var arr [3]int
-	// arr[2] = 2
-	// fmt.Println(arr)
+func main(){
+	go timer("Push Up")
+	timer("Sit Up")
+	// go timer("Sit Up")
+	// fmt.Scanln()
+}
 
-	// // short hand array
-	// arr := [3]int{1,2,3}
-	// fmt.Println(arr)
-
-
-	// short hand dynamic array
-	arr := []int{1,2,3}
-	arr = append(arr, 4)
-	fmt.Println(arr)
-	
+func timer(todo string){
+	for i:=1;i<5;i++{
+		fmt.Println(todo, i)
+		time.Sleep(time.Second)
+	}
 }
